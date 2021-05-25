@@ -1,0 +1,33 @@
+<section class="file-content">
+  <div class="file-container">
+    <label>File:&nbsp;&nbsp;</label>
+    <div>
+      <mat-form-field class="example-full-width">
+        <input matInput [formControl]="fileUpload" />
+      </mat-form-field>
+    </div>
+    <div class="btn-browse">
+      <button mat-raised-button color="primary" (click)="selectFile()">
+        Browse
+      </button>
+    </div>
+  </div>
+  <div class="after-content">
+    <div class="upload-container">
+      <button
+        mat-raised-button
+        [disabled]="!fileUpload.value"
+        color="primary"
+        (click)="upload()"
+      >
+        Upload
+      </button>
+    </div>
+    <div class="progress-content" *ngIf="showProgress">
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </div>
+    <div *ngIf="showSuccess">
+      <h4>Upload Complete!</h4>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,45 @@
+.file-content {
+  padding: 2rem;
+  .file-container {
+    display: flex;
+    align-items: center;
+    input {
+      border: 1px solid #cacaca;
+      height: 2rem;
+      padding: 0 0.5rem;
+    }
+    .btn-browse {
+      margin: 0 0 0.5rem 7rem;
+    }
+  }
+  .progress-content {
+    width: 300px;
+    padding: 1rem 0;
+    .mat-progress-bar {
+      height: 8px;
+      border-radius: 0.2rem;
+    }
+  }
+  h4 {
+    padding: 2rem 0;
+  }
+  .after-content {
+    padding-left: 2rem;
+  }
+}
+
+::ng-deep {
+  .file-container {
+    flex-wrap: wrap;
+    .btn-browse {
+      margin-left: 2rem !important;
+    }
+    .mat-form-field-appearance-legacy.mat-form-field-disabled
+      .mat-form-field-underline {
+      background-image: none;
+    }
+  }
+  .dialog-container {
+    width: 60%;
+  }
+}

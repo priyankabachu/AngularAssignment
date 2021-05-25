@@ -1,0 +1,11 @@
+<div class="history-content">
+  <h3>History of files uploaded :</h3>
+  <ul>
+    <li *ngFor="let file of pastFiles">{{ file }}</li>
+  </ul>
+  <div *ngIf="pastFiles && pastFiles.length > 0">
+    <button mat-raised-button color="primary" (click)="removeFiles()">
+      Clear
+    </button>
+  </div>
+</div>
